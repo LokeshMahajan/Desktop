@@ -30,6 +30,7 @@ one.addEventListener('click',function(){
   }else {
     one.textContent = '';
   }
+  check(one.textContent)
 })
 
 
@@ -41,6 +42,7 @@ two.addEventListener('click',function(){
   }else {
     two.textContent = '';
   }
+  check(two.textContent)
 })
 
 
@@ -52,6 +54,7 @@ three.addEventListener('click',function(){
   }else {
     three.textContent = '';
   }
+  check(three.textContent)
 })
 
 four.addEventListener('click',function(){
@@ -62,6 +65,7 @@ four.addEventListener('click',function(){
   }else {
     four.textContent = '';
   }
+  check(four.textContent)
 })
 
 
@@ -73,6 +77,7 @@ five.addEventListener('click',function(){
   }else {
     five.textContent = '';
   }
+  check(five.textContent)
 })
 
 six.addEventListener('click',function(){
@@ -83,6 +88,7 @@ six.addEventListener('click',function(){
   }else {
     six.textContent = '';
   }
+  check(six.textContent)
 })
 
 seven.addEventListener('click',function(){
@@ -93,6 +99,7 @@ seven.addEventListener('click',function(){
   }else {
     seven.textContent = '';
   }
+  check(seven.textContent)
 })
 
 eight.addEventListener('click',function(){
@@ -103,6 +110,7 @@ eight.addEventListener('click',function(){
   }else {
     eight.textContent = '';
   }
+  check(eight.textContent)
 })
 
 nine.addEventListener('click',function(){
@@ -113,4 +121,35 @@ nine.addEventListener('click',function(){
   }else {
     nine.textContent = '';
   }
+  check(nine.textContent);
 })
+
+
+
+
+function check(combination){
+    if ((one.textContent === combination) && (two.textContent === combination) && (three.textContent === combination)) {
+        window.alert('Player '+combination+' won');
+    }
+    else if ((one.textContent == combination) && (four.textContent == combination) && (seven.textContent == combination)) {
+      window.alert('Player '+combination+' won');
+    }
+    else if ((seven.textContent == combination) && (eight.textContent == combination) && (nine.textContent == combination)) {
+        window.alert('Player '+combination+' won');
+    }
+    else if ((three.textContent == combination) && (six.textContent == combination) && (nine.textContent == combination)) {
+        window.alert('Player '+combination+' won');
+    }
+    else if ((one.textContent == combination) && (five.textContent == combination) && (nine.textContent == combination)) {
+        window.alert('Player '+combination+' won');
+    }
+    else if ((three.textContent == combination) && (five.textContent == combination) && (seven.textContent == combination)) {
+        window.alert('Player '+combination+' won');
+    }
+    else if ((two.textContent == combination) && (five.textContent == combination) && (eight.textContent == combination)) {
+        window.alert('Player '+combination+' won');
+    }
+    else if ((four.textContent == combination) && (five.textContent == combination) && (six.textContent == combination)) {
+      window.alert('Player '+combination+' won');
+    }
+}
