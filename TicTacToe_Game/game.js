@@ -1,3 +1,4 @@
+//All the Varable Initialized
 var one = document.querySelector("#one");
 var two = document.querySelector("#two");
 var three = document.querySelector("#three");
@@ -12,16 +13,17 @@ var nine = document.querySelector("#nine");
 var restart = document.querySelector("#b");
 var squar = document.querySelectorAll("td");
 
+//Restart button Logic
 function clearBoard() {
   for(var i=0; i<squar.length; i++){
     squar[i].textContent = '';
   }
 }
-
+//Restart Event Calling
 restart.addEventListener('click',clearBoard);
 
 
-
+//Event Listener and anonymousfunction to add O and X
 one.addEventListener('click',function(){
   if (one.textContent === ''){
     one.textContent = 'X';
@@ -125,7 +127,7 @@ nine.addEventListener('click',function(){
 })
 
 
-
+//Function Combination To check who won the game..
 
 function check(combination){
     if ((one.textContent === combination) && (two.textContent === combination) && (three.textContent === combination)) {
